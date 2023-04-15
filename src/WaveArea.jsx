@@ -1,6 +1,6 @@
 import { useState, Fragment } from 'react';
 import StartWaveButton from './StartWaveButton';
-import sockeye from './assets/sockeye.jpg';
+import sockeye from './assets/sockeye-3d.png';
 
 function WaveArea() {
     let [ goldenEggCount, setGoldenEggCount ] = useState(0);
