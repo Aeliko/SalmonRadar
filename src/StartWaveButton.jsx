@@ -93,6 +93,12 @@ function BeginWave(hazardLevel, waveNumber, setWaveNumber) {
     let waveStartingSentence = new SpeechSynthesisUtterance(`Wave ${waveNumber} Starting`);
     synth.speak(waveStartingSentence);
 
+    if (waveNumber == 4) {
+        let alertMessage = new SpeechSynthesisUtterance(`Please refer to on-screen instructions`);
+        console.log('Please refer to on-screen instructions');
+        synth.speak(alertMessage);
+    }
+
     let timeline = returnWaveTimeline(hazardLevel, waveNumber);
     timeline.forEach((bossInfo) => {
         let waitTimeBeforeNotification = 0;
